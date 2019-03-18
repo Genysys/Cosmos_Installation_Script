@@ -48,8 +48,6 @@ curl https://raw.githubusercontent.com/cosmos/launch/master/genesis.json > $HOME
 # Adding Persistent Peer to genesis.json
 sed -i '' 's/persistent_peers = ""/persistent_peers = 89e4b72625c0a13d6f62e3cd9d40bfc444cbfa77@34.65.6.52:26656"/' $HOME/.gaiad/config/config.toml
 
-sed -i '' 's/persistent_peers = "d0869a3e443f27ee71d13308e3c505a97b25886a@144.76.155.231:26656"/persistent_peers = "89e4b72625c0a13d6f62e3cd9d40bfc444cbfa77@34.65.6.52:26656"/' $HOME/.gaiad/config/config.toml
-
 #Starting Gaia
 gaiad start --log_level="*:info"
 
